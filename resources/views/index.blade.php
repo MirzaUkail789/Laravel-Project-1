@@ -3,92 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <link rel="stylesheet" href="aset/css/style.css">
+    <title>Martabak Lekku</title>
+    @vite('resources/css/app.css')
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <h1>Martabak Lekku</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Beranda</a></li>
-                    <li class="dropdown">
-                        <a href="#features">Menu</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#feature1">Menu 1</a></li>
-                            <li><a href="#feature2">Menu 2</a></li>
-                            <li><a href="#feature3">Menu 3</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#about">Tentang Kami</a></li>
-                    <li><a href="#contact">Kontak</a></li>
+<body class="font-sans">
+    <header class="bg-gray-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Martabak Lekku</h1>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="hover:text-gray-300">Beranda</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Menu</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Tentang Kami</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Kontak</a></li>
                 </ul>
             </nav>
+            <button class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <h2>Selamat datang di Toko Kami</h2>
-            <p>Kami menyediakan Mertabak untuk Anda</p>
-            <a href="#contact" class="cta-button">Hubungi Kami</a>
-        </div>
-    
-    </section>
+    <main class="container mx-auto px-4 py-8">
+        <section class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">Selamat datang di Toko Kami</h2>
+            <p class="mb-6">Kami menyediakan Mertabak untuk Anda</p>
+            <a href="#" class="bg-gray-800 text-white px-6 py-2 rounded hover:bg-gray-700 transition duration-300">Hubungi Kami</a>
+        </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <h2>Menu Makanan</h2>
-            <div id="feature1" class="feature-item">
-                <img src="/asset/image/Martabak.webp" alt="Fitur 1" class="feature-image">
-                <h3>Menu 1</h3>
-                <p>Deskripsi Martabak 1.</p>
+        <section>
+            <h2 class="text-2xl font-bold mb-6 text-center">Menu Makanan</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                    <img src="fitur1.jpg" alt="Fitur 1" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl mb-2">Menu 1</h3>
+                        <p class="text-gray-700">Deskripsi Martabak 1.</p>
+                    </div>
+                </div>
+                <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                    <img src="fitur2.jpg" alt="Fitur 2" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl mb-2">Menu 2</h3>
+                        <p class="text-gray-700">Deskripsi Martabak 2.</p>
+                    </div>
+                </div>
+                <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                    <img src="fitur3.jpg" alt="Fitur 3" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl mb-2">Menu 3</h3>
+                        <p class="text-gray-700">Deskripsi Martabak 3.</p>
+                    </div>
+                </div>
             </div>
-            <div id="feature2" class="feature-item">
-                <img src="/asset/image/Martabak.webp" alt="Fitur 2" class="feature-image">
-                <h3>Menu 2</h3>
-                <p>Deskripsi Martabak 2.</p>
-            </div>
-            <div id="feature3" class="feature-item">
-                <img src="/asset/image/Martabak.webp" alt="Fitur 3" class="feature-image">
-                <h3>Menu 3</h3>
-                <p>Deskripsi Martabak 3.</p>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>Tentang Kami</h2>
-            <p>Kami Menjual Martabak</p>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Kontak Kami</h2>
-            <form action="#" method="post">
-                <label for="name">Nama:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Pesan:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Kirim Pesan</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Nama Website. Semua hak dilindungi.</p>
+    <footer class="bg-gray-800 text-white py-4 mt-12">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Martabak Lekku. All rights reserved.</p>
         </div>
     </footer>
 </body>
