@@ -17,6 +17,8 @@
                     <li><a href="#" class="hover:text-gray-300">Menu</a></li>
                     <li><a href="#" class="hover:text-gray-300">Tentang Kami</a></li>
                     <li><a href="#" class="hover:text-gray-300">Kontak</a></li>
+                    <li><a href="{{ route('login')}}">login</a></li>
+                    <li><a href="{{ route('about')}}">about</a></li>
                 </ul>
             </nav>
             <button class="md:hidden">

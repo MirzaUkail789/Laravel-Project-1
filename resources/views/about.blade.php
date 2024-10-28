@@ -6,8 +6,17 @@
   @vite('resources/css/app.css')
 </head>
 <body>
-  <h1 class="text-3xl font-bold underline text-red-900	">  
-    Hello world!
+<h1 class="text-3xl font-bold underline text-orange-700 p-10 bg-sky-950 text-center">
+    About                                                                                                                                                                                                                                                                             
   </h1>
+  
+  <p class="text-3xl" >
+    Hello, Im {{ $name }}!!!
+  </p>
+
+  <p class="text-3xl" >
+    I live in {{ $address }}, and my email is {{ $email }}
+  </p>
+  
 </body>
 </html>

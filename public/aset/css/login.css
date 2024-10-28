@@ -8,7 +8,8 @@
 /* Style for body */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #4c4f5f;
+    background-color: #333
+    ;
     display: flex;
     justify-content: center;
     align-items: center;
